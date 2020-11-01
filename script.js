@@ -8,16 +8,18 @@ canvas.height = cy;
 
 const logDiv = document.querySelector("#log");
 
-function log(line) {
+function log(...args) {
   if (!logDiv) {
     return;
   }
 
-  line = typeof line === "string"
-    ? line
-    : JSON.stringify(line, null, 2);
+  const converted = args.map(line => {
+    return typeof line === "string"
+      ? line
+      : JSON.stringify(line, null, 2);
+  });
 
-  logDiv.innerHTML = `${line}`;
+  logDiv.innerHTML = converted.join(" ");
 }
 
 
