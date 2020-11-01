@@ -1,0 +1,14 @@
+{
+  "name": "web-art-playground",
+  "version": "1.0.0",
+  "description": "Simple web generative art playground",
+  "scripts": {
+    "start": "browser-sync . -w --no-open ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ivan Sevcik",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.13"
+  }
+}
